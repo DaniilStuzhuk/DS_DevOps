@@ -43,7 +43,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
                         def workerImage = docker.build(
-                            "xxxxx/worker:v${env.BUILD_ID}",
+                            "dfrostsh/worker:v${env.BUILD_ID}",
                             "./worker"
                         )
                         workerImage.push()
